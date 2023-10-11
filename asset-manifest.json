@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/deck/static/css/main.70a8bb8e.css",
+    "main.js": "/deck/static/js/main.98d4dd3b.js",
+    "static/media/register_banner.png": "/deck/static/media/register_banner.b8aedfb725652b912a08.png",
+    "static/media/courses-banner.png": "/deck/static/media/courses-banner.b035f9757750904f29ae.png",
+    "static/media/icofont.woff": "/deck/static/media/icofont.dad3accba068281878f1.woff",
+    "static/media/icofont.woff2": "/deck/static/media/icofont.9c33516aab48c61e3081.woff2",
+    "static/media/header-bg.jpg": "/deck/static/media/header-bg.e0557e13d5bd36d7ef51.jpg",
+    "static/media/price-plan-bg.jpg": "/deck/static/media/price-plan-bg.0154208fe476cc2f50e7.jpg",
+    "static/media/master.png": "/deck/static/media/master.73a8a4741546b84c2548.png",
+    "index.html": "/deck/index.html",
+    "main.70a8bb8e.css.map": "/deck/static/css/main.70a8bb8e.css.map",
+    "main.98d4dd3b.js.map": "/deck/static/js/main.98d4dd3b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70a8bb8e.css",
+    "static/js/main.98d4dd3b.js"
+  ]
+}

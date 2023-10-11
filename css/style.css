@@ -1,0 +1,57 @@
+.LoginModal > .MuiDialog-paperWidthSm{
+    /* width: 100%; */
+}
+.MuiDialog-scrollPaper > .MuiPaper-rounded{
+    width: 100%;
+}
+.LoginModal{
+    /* margin: 0px; */
+    width: 100%;
+}
+.loginDialog{
+    width: 100%;
+}
+
+.aboutUsBox{
+    z-index: 1;
+}
+
+#toast-container {
+    margin-top: 1rem;
+}
+
+#toast-container.toast-top-full-width > .toast {
+    max-width: 570px;
+}
+
+#toast-container > .toast-success {
+    background-color: #00bb09;
+    opacity: 1;
+
+    margin-right: 30px !important;
+    width: 400px !important ;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* #toast-container>.toast-success:hover {
+    background-color: #00bb09;
+    opacity:1;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.4);
+  } */
+
+#toast-container > .toast-warning {
+    background-color: #b39800;
+    opacity: 1;
+    margin-top: 60px;
+    width: 400px !important ;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+#toast-container > .toast-error {
+    margin-top: 10px;
+    margin-right: 10px !important;
+
+    width: 400px !important ;
+    background-color: #c00000;
+    opacity: 1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
