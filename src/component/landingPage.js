@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import "./landingPage.scss";
 import WebFont from 'webfontloader'
+import logo from "../assets/img/Decklogo.png"
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const LandingPage = () => {
   const [email, setEmail] = useState("");
-  WebFont.load({
-    google: {
-          families: ['Helvetica:300,500,700','Material Icons']
-      }
-  });
+
   const handler = (event) => {
     if (event.code === "Enter") {
       const emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
@@ -71,15 +68,15 @@ const LandingPage = () => {
       />
       <div className="landing-container">
         <div className="deck-logo">
-          <h1>Deck</h1>
+          <img  className="logo" src={logo} alt="logo"></img>
         </div>
         <div className="deck-heading">
-          <p>We're building a solution for tomorrow.</p>
-          <p>In stealth.</p>
+          <p className="para">We're building a solution for tomorrow.</p>
+          <p className="para">In stealth.</p>
         </div>
         <div className="deck-email">
           <div>
-            <p>
+            <p  className="para">
               Enter Your Email to subscribe
               <br /> to updates and get early access.
             </p>
@@ -96,7 +93,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="deck-mail">
-          <p>deck.work</p>
+          <p  className="para">deck.work</p>
         </div>
       </div>
     </div>
