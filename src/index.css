@@ -1,17 +1,17 @@
 body {
-  margin: 0;
-  font-family: 'Helvetica Neue',;
+  margin: 0 0 0 0;
+  font-family: 'Helvetica';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/* code {
   font-family: 'Helvetica Neue',
     monospace;
-}
+} */
 p{
   font-size: 24px !important;
-  line-height: 30px !important;
+  line-height: 28px !important;
 }
 .profile{
 align-content: end;
