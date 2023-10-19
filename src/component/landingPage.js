@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import "./landingPage.scss";
-import WebFont from 'webfontloader'
-import logo from "../assets/img/Decklogo.png"
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -12,8 +9,10 @@ const LandingPage = () => {
   const handler = (event) => {
     if (event.code === "Enter") {
       const emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
-      
+      // console.log(event);
+      // C:\Users\ankur\Downloads\newdeck$oct\src\component
       if (emailRegex.test(email)) {
+
            // Email is valid
            setEmail("");
            toast.success("Thank you for Contacting us!", {
@@ -37,7 +36,7 @@ const LandingPage = () => {
              pauseOnHover: true,
              draggable: true,
              progress: undefined,
-             theme: "colored",
+             theme: "colored ",
            });
          }
        } else {
@@ -46,10 +45,11 @@ const LandingPage = () => {
       //  console.log("Email entered:", email)
       }
 
-      const handleEmailChange = (event) => {
-        setEmail(event.target.value);
-      };
+      
 
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
 
   return (
     <div className="landing">
@@ -67,15 +67,15 @@ const LandingPage = () => {
       />
       <div className="landing-container">
         <div className="deck-logo">
-          <img  className="logo" src={logo} alt="logo"></img>
+          <h1>Deck</h1>
         </div>
         <div className="deck-heading">
-          <p className="para">We're building a solution for tomorrow.</p>
-          <p className="para">In stealth.</p>
+          <p>We're building a solution for tomorrow.</p>
+          <p>In stealth.</p>
         </div>
         <div className="deck-email">
           <div>
-            <p  className="para">
+            <p>
               Enter Your Email to subscribe
               <br /> to updates and get early access.
             </p>
@@ -92,7 +92,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="deck-mail">
-          <p  className="para">deck.work</p>
+          <p>deck.work</p>
         </div>
       </div>
     </div>

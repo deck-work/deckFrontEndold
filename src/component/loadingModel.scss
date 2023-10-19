@@ -1,0 +1,48 @@
+/* LoadingModal.scss */
+.loading-modal {
+    position: fixed;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border-radius: 10px;
+    min-width: 60%;
+    min-height: 68vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+  
+    .progress-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+  
+      progress {
+        width: 80%;
+        height: 45px;
+      }
+    }
+   .importing {
+    h6 {
+        text-align: center;
+        color: black;
+      }
+   }
+  
+    .cancel-button {
+      margin-top: 1rem;
+      border: 1px solid #000;
+      padding: 12px;
+      border-radius: 5px;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  

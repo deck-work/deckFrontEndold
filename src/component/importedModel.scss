@@ -1,0 +1,56 @@
+/* ImportedModal.scss */
+.imported-modal {
+    position: fixed;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border-radius: 10px;
+    min-width: 60%;
+    min-height: 68vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  
+    .deck-heading {
+      color: black;
+      h6 {
+        font-weight: bold;
+      }
+    }  
+
+   .imported-button {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    button {
+      border: 1px solid #000;
+      padding: 12px;
+      border-radius: 5px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      min-width: 100px;
+      margin-bottom: 1rem;
+    }
+    .close-window-paragraph{
+      color: gray;
+      cursor: pointer;
+    }
+    .failed-button {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      p {
+        cursor: pointer;
+        color: gray;
+        text-align: center;
+      }
+    }
+   }
+    }
+  

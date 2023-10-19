@@ -2,7 +2,6 @@
   background-color: #e6e1d6;
   width: 100%;
   height: 100vh;
-  font-family: Helvetica;
   .landing-container {
     background-color: #e6e1d6;
     max-width: 100%;
@@ -16,13 +15,13 @@
       h1 {
         font-weight: bolder;
         line-height: 25px;
-        font-size: 4.5rem;
+        font-size: 3.5rem;
       }
     }
     .deck-heading {
       // font-weight: bold;
       color: black;
-      // font-family: "Poppins", sans-serif;
+      font-family: "Poppins", sans-serif;
       margin-top: 14rem;
     }
     .deck-email {

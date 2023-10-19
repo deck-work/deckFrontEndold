@@ -1,12 +1,19 @@
 import './App.css';
 import { RenderRout } from './Router';
-import LandingPage from './component/landingPage';
+import Header from './component/header';
+import Login from './login';
+
+import Upload from './upload';
+// import Profile from './profile';
 
 
 function App() {
 
   return (<>
-  <LandingPage></LandingPage>  
+  <RenderRout>
+    {/* <Login /> */}
+  </RenderRout>
+    
 </>
    
     

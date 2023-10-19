@@ -1,0 +1,137 @@
+.container {
+}
+
+.drag-container {
+  display: flex;
+  gap: 20px;
+}
+
+h2 {
+  color: black;
+}
+
+.deck-add-new >button {
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 8px;
+  padding: 6px;
+  text-align: center;
+  width: 5.9rem;
+  height: "2.5rem";
+  text-align: center;
+  color: white;
+}
+.deck-area {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  // flex-wrap: wrap;
+  width: 100%;
+  margin-top: 2rem;
+}
+.deck-image {
+  display: flex;
+  gap: 2rem;
+  width: 700px;
+  height: 200px;
+
+}
+.deck-id {
+}
+.deck-images {
+  height: 140px;
+  width: 220px;
+  border-radius: 25px;
+  margin-left: 1em;
+}
+
+// isModelopen
+
+.deck-model {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  // gap: .5rem;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 10px;
+  min-width: 60%;
+  min-height: 55vh;
+}
+
+.model-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-left {
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+  align-items: center;
+}
+.top-left >span {
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.model-top > p{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  height: 1.5rem;
+  font-size: 1rem;
+  color: black;
+}
+
+.model-drop {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.model-or {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+.model-google {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: start;
+  color: black;
+}
+.model-google-import {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+input {
+  border: 1px solid #000;
+  padding: 8px;
+  border-radius: 5px;
+  // width: 350%;
+  flex-grow: 4;
+}
+
+.google-import{
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  // width: 10%;
+}
+
+.model-sure {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: start;
+  color: black; 
+}

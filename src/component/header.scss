@@ -1,0 +1,82 @@
+// // .header{
+// //     display: flex;
+// //     justify-content: space-between;
+// //     border-bottom: 0.5px solid;
+// //     background: black;  
+// //   }
+// //   .header h3{
+// //     color: white;
+// //     margin-left: 1%;
+// //   }
+
+// /* header.scss */
+// .header {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   padding: 10px;
+//   // background-color: #333;
+//   background: #000000;
+//   // color: white;
+
+//   h3 {
+//     // margin: 0;
+//     color: white;
+//     margin-left: 1%;
+//   }
+
+//   .user-info {
+//     display: flex;
+//     align-items: center;
+//     gap: 10px;
+
+//     .profile-pic {
+//       width: 30px;
+//       height: 30px;
+//       border-radius: 50%;
+//     }
+
+//     .user-name {
+//       font-weight: bold;
+//     }
+
+//     button {
+//       background-color: transparent;
+//       border: none;
+//       color: white;
+//       cursor: pointer;
+//     }
+//   }
+// }
+
+/* header.scss */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: #000000;
+  color: white;
+
+  h3 {
+    margin: 0;
+    color: white;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .profile-pic {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    .user-name {
+      font-weight: bold;
+    }
+  }
+}
