@@ -160,7 +160,7 @@ function Custom() {
       console.log(err)
     }
   }
-  const generateSummary = async () => {
+  const generateSummary = async (slideId) => {
     // setLoadingData(true)
     setIsLoading(true)
     try {
@@ -234,8 +234,8 @@ console.log(respon);
             <div className="notes">
               <div className="notes-flex">
                 <h3>Notes</h3>
-                {apiSlideResponse.summary[x]?.summaryCount>=1?<button onClick={generateSummary} disabled={true}>Generated</button>:
-               <button onClick={generateSummary} disabled={false}>Generate</button>}
+                {apiSlideResponse.summary[x]?.summaryCount>=1?<button onClick={generateSummary(apiSlideResponse.id[x]?.slideId)} disabled={true}>Generated</button>:
+               <button onClick={generateSummary(apiSlideResponse.id[x]?.slideId)} disabled={false}>Generate</button>}
               </div> 
               <div className="notes-input">
                 <textarea
