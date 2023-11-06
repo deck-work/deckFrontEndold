@@ -50,17 +50,16 @@ const Drag = () => {
     let userId=localStorage.getItem("userId")
     formdata.append("file", files[0].file);
     formdata.append("userId", userId);
-    let  headers={
-      "Content-Type": "multipart/form-data",
-    }
+      let  headers={
+        "Content-Type": "multipart/form-data",
+      }
     const apiResponse = await callAPI(apiUrls.CONVERT, {}, "POST", formdata,{},headers);
     console.log(apiResponse, "apiiiiiiiii");
     if (apiResponse.status === 200) {
       setIsImported(true)
       setDeckId(apiResponse.data.deckId)
       setIsShow(true)
-      // fetchData()
-      // let info=apiResponse.data.split(" ");
+      
       toast.success(apiResponse.data.message + " ", {
         position: "top-center",
         autoClose: 5000,
@@ -202,7 +201,7 @@ const Drag = () => {
           state: { deckId: deckId} 
         }
         } className="deck-image"> */}
-            {val.map((image, i) => (
+            {val?.map((image, i) => (
               <div key={image.id} className="deck-id" 
               onClick={handleImageClick}
               >
