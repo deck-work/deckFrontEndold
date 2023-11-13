@@ -80,7 +80,6 @@ function Custom() {
   };
   function setImage() {
     
-    console.log("spaisen", apiResponse);
     let tempArr = [];
     if(apiResponse.ext=="pdf"){
     // tempArr.push({ id: 1, value: `http://localhost:5001/uploads/${param1}/${param2}/${apiResponse.imageName}.jpg` })
@@ -98,7 +97,7 @@ function Custom() {
     }
     setImgs(tempArr)
   }
-  // console.log("image",imgs);
+  console.log("image",imgs);
   const [wordData, setWordData] = useState();
   const [val, setVal] = useState(0);
   const [x, setX] = useState(0);
@@ -234,8 +233,8 @@ console.log(respon);
             <div className="notes">
               <div className="notes-flex">
                 <h3>Notes</h3>
-                {apiSlideResponse.summary[x]?.summaryCount>=1?<button onClick={generateSummary(apiSlideResponse.id[x]?.slideId)} disabled={true}>Generated</button>:
-               <button onClick={generateSummary(apiSlideResponse.id[x]?.slideId)} disabled={false}>Generate</button>}
+                {apiSlideResponse.summary[x]?.summaryCount>=1?<button disabled={true}>Generated</button>:
+               <button  disabled={false}>Generate</button>}
               </div> 
               <div className="notes-input">
                 <textarea

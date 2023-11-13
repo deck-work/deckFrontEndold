@@ -29,6 +29,7 @@ function Login() {
                   }
                   const apiResponse = await callAPI(apiUrls.REGISTER, {}, "POST",formdata,{},headersObj);
                   console.log(apiResponse,"apiiiiiiiii");
+                  if(apiResponse.status==200){
                   localStorage.setItem("userId", apiResponse.data.userId);
                   
                   
@@ -39,6 +40,7 @@ function Login() {
                   localStorage.setItem("userPic", object.picture);
                   // console.log(object);
                 }}
+              }
                 onError={() => {
                   console.log("Login Failed");
                 }}

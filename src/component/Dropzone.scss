@@ -1,0 +1,32 @@
+.file {
+    display: flex;
+    // justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    // bottom: 40px;
+    top: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    // left: 154px;
+    // border: 1px solid black;
+    // border-radius: 15px;
+    // background-color: gray;
+    list-style: none;
+    cursor: pointer;
+}
+.file li {
+    color: black ;
+}
+.dop-container {
+// border: 1px solid black;
+// height: 112px;
+}
+.dropzone {
+    border: 2px dotted black;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
