@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0fb3f4fa.css",
+    "main.js": "/static/js/main.49f889a6.js",
+    "static/js/885.691abf12.chunk.js": "/static/js/885.691abf12.chunk.js",
+    "static/css/319.543275c1.chunk.css": "/static/css/319.543275c1.chunk.css",
+    "static/js/319.bb863319.chunk.js": "/static/js/319.bb863319.chunk.js",
+    "static/js/931.72803fac.chunk.js": "/static/js/931.72803fac.chunk.js",
+    "static/media/register_banner.png": "/static/media/register_banner.b8aedfb725652b912a08.png",
+    "static/media/courses-banner.png": "/static/media/courses-banner.b035f9757750904f29ae.png",
+    "static/media/icofont.woff": "/static/media/icofont.dad3accba068281878f1.woff",
+    "static/media/icofont.woff2": "/static/media/icofont.9c33516aab48c61e3081.woff2",
+    "static/media/header-bg.jpg": "/static/media/header-bg.e0557e13d5bd36d7ef51.jpg",
+    "static/media/price-plan-bg.jpg": "/static/media/price-plan-bg.0154208fe476cc2f50e7.jpg",
+    "static/media/master.png": "/static/media/master.73a8a4741546b84c2548.png",
+    "index.html": "/index.html",
+    "main.0fb3f4fa.css.map": "/static/css/main.0fb3f4fa.css.map",
+    "main.49f889a6.js.map": "/static/js/main.49f889a6.js.map",
+    "885.691abf12.chunk.js.map": "/static/js/885.691abf12.chunk.js.map",
+    "319.543275c1.chunk.css.map": "/static/css/319.543275c1.chunk.css.map",
+    "319.bb863319.chunk.js.map": "/static/js/319.bb863319.chunk.js.map",
+    "931.72803fac.chunk.js.map": "/static/js/931.72803fac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0fb3f4fa.css",
+    "static/js/main.49f889a6.js"
+  ]
+}
