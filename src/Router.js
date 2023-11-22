@@ -96,7 +96,7 @@ const routes = () => {
       layout: BaseLayout,
       // guard: Guest,
       exact: true,
-      path: "/presentation/:id",
+      path: "/presentation/",
       element: lazy(() => import("./component/presentation")),
     },
     {

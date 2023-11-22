@@ -9,7 +9,7 @@ function ImportedModal({ handleCloseModal,data}) {
   const [isImported, setImported] = useState(false);
   function handleClick(){
 
-    navigate(`/presentation?userId=${data.userId}&deckId=${data.deckId}`)
+    navigate(`/presentation?fileId=${data.fileId}`)
   }
   
   // if (!visible) return null;

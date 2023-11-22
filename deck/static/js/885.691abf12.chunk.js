@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdeckapp=self.webpackChunkdeckapp||[]).push([[885],{885:function(e,n,t){t.r(n);t(4165),t(5861);var u=t(9439),a=t(2791),r=(t(150),t(8829),t(184));n.default=function(){var e=(0,a.useState)(""),n=(0,u.Z)(e,2),t=n[0];n[1];return(0,r.jsx)("div",{children:(0,r.jsx)("div",{dangerouslySetInnerHTML:{__html:t}})})}}}]);
-//# sourceMappingURL=885.691abf12.chunk.js.map

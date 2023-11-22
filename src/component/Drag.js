@@ -20,6 +20,7 @@ const Drag = () => {
   const [inputUrl, setInputUrl] = useState("");
   const [val, setVal] = useState([]);
   const [file, setFile] = useState([]);
+  const [fileId, setFileId] = useState();
   const [userId, setUserId] = useState();
   const [deckId, setDeckId] = useState();
 
@@ -57,7 +58,7 @@ const Drag = () => {
     console.log(apiResponse, "apiiiiiiiii");
     if (apiResponse.status === 200) {
       setIsImported(true)
-      setDeckId(apiResponse.data.deckId)
+      setFileId(apiResponse.data.id)
       setIsShow(true)
       
       toast.success(apiResponse.data.message + " ", {
@@ -169,8 +170,9 @@ const Drag = () => {
   function handleImageClick(event){
     // console.log(event.target.id)
     setDeckId(event.target.id)
+    console.log(event.target.id);
     
-    navigate(`/presentation?userId=${userId}&deckId=${event.target.id}`)
+    navigate(`/presentation?fileId=${event.target.id}`)
 
         //  {{<Link to={`/presentation/${1}`} className="deck-image"> }}
 
@@ -201,15 +203,16 @@ const Drag = () => {
           state: { deckId: deckId} 
         }
         } className="deck-image"> */}
-            {val?.map((image, i) => (
-              <div key={image.id} className="deck-id" 
+        {console.log(val)}
+            {val.map((image, i) => (
+              <div key={image.fileId} className="deck-id" 
               onClick={handleImageClick}
               >
                 <img
-                  src={image.url}
+                  src={image.images.imageUrl}
                   name="image"
                   alt={`Im`}
-                  id={image.id}
+                  id={image.fileId}
                   value={image.id}
                   className="deck-images"
                 />
@@ -277,7 +280,7 @@ const Drag = () => {
         {/* {console.log("xuz",userId,deckId)} */}
 
         
-        {isImported && <ImportedModal handleCloseModal={handleCloseModal} data={{userId:userId,deckId:deckId}} />}
+        {isImported && <ImportedModal handleCloseModal={handleCloseModal} data={{fileId}} />}
       </div>
     </>
   );
