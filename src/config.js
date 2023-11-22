@@ -1,3 +1,3 @@
 export const defaultConfig = {
-    baseAPIUrl:"http://localhost:5001",
+    baseAPIUrl:"https://ec2-13-233-237-24.ap-south-1.compute.amazonaws.com/",
 }
