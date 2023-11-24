@@ -1,0 +1,47 @@
+.sub-modal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 22rem;
+    left: 34rem;
+    background-color: black;
+    color: green;
+    width: 35%;
+    border-radius: 8px;
+    padding: 10px;
+    gap: 1rem;
+    // border: 10x solid black;
+    // height: 30vh;
+
+    .rename {
+        display: flex;
+        justify-content: space-between;
+      p{
+        color: white;
+        font-size: 1.5rem;
+      }
+        span {
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+    }
+    .update {
+    p {
+        color: gray;
+    }
+        .update-input {
+            display: flex;
+            flex-direction: row;
+            gap: .5rem;
+            
+            button{
+                background-color: white;
+                color: black;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,71 @@
+.delete-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20rem;
+    left: 34rem;
+    background-color: black;
+    color: white;
+    width: 35%;
+    border-radius: 8px;
+    padding: 15px;
+    gap: 1rem;
+    // border: 10x solid black;
+    // height: 30vh;
+
+    .del-deck {
+        display: flex;
+        flex-direction: column;
+        .delete {
+           display: flex;
+           justify-content: space-between;
+        //    align-items: center;
+           p{
+            color: white;
+            font-size: 21px;
+           }
+           span{
+            color: white;
+            cursor: pointer;
+           }
+        }
+        .del-sure{
+            p{
+                color: gray;
+                font-size: 16px;
+            }
+        }
+    }
+.undo{
+    p{
+        color: gray;
+        font-size: 14px;
+    }
+}
+
+.del-cancel{
+    display: flex;
+    justify-content: flex-end;
+    gap: .5rem;
+    button:first-child {
+        border-radius: 5px;
+        text-decoration: none;
+        outline: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+    }
+    button{
+        border-radius: 5px;
+        text-decoration: none;
+        outline: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+    }
+}
+
+}

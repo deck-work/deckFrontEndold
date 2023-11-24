@@ -8,6 +8,8 @@ import { apiUrls } from "../utils/apiUrls";
 import { callAPI } from "../utils/apiUtils";
 import "react-dropzone-uploader/dist/styles.css";
 import Dropzone from "react-dropzone-uploader";
+import Rename from "./rename";
+import Delete from "./delete"
 import "./Drag.scss";
 const Drag = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,6 +25,11 @@ const Drag = () => {
   const [fileId, setFileId] = useState();
   const [userId, setUserId] = useState();
   const [deckId, setDeckId] = useState();
+  const [isDotShow, setIsDotShow] = useState(false);
+  const [editedDeckName, setEditedDeckName] = useState("");
+  const [isRenameModalOpen, setIsRenameModalOpen] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+
 
   const navigate = useNavigate();
 
@@ -184,6 +191,47 @@ const Drag = () => {
     setIsModalOpen(false)
 
   }
+  
+  const handleDotClick = () => {
+    console.log('handleDotClick is invoked');
+    setIsDotShow(true)
+    // setEditedDeckName(false)
+    setEditedDeckName(editedDeckName || "Deck presentation 01");
+    setIsDeleteModalOpen(false);
+  }
+  
+  const handleRenameClick = () => {
+    // Open the Rename modal
+    setIsRenameModalOpen(true);
+    // Close the three dots modal
+    setIsDotShow(false);
+    setIsDeleteModalOpen(false);
+  }
+
+  const handleUpdateDeckName = (newName) => {
+    // Perform the update operation, e.g., call an API
+    console.log("Updating deck name:", newName);
+
+    // Update the deck name in the component state
+    setEditedDeckName(newName);
+
+    // Close the rename modal after updating
+    setIsDotShow(false);
+  };
+
+  const handleDeleteClick = () => {
+    // Open Delete modal
+    setIsDeleteModalOpen(true);
+    // Close other modals
+    setIsRenameModalOpen(false);
+    setIsDotShow(false);
+  }
+
+  const handleCancelDelete = () => {
+    // Set the state or perform any action to close the Delete modal
+    setIsDeleteModalOpen(false);
+  };
+
   return (
     <>
       <div className="container">
@@ -206,7 +254,6 @@ const Drag = () => {
         {console.log(val)}
             {val.map((image, i) => (
               <div key={image.fileId} className="deck-id" 
-              onClick={handleImageClick}
               >
                 <img
                   src={image.images.imageUrl}
@@ -215,12 +262,36 @@ const Drag = () => {
                   id={image.fileId}
                   value={image.id}
                   className="deck-images"
+              onClick={handleImageClick}
+
                 />
-                <p>{i + 1}</p>
+                 <div className="dots">
+              <p>{editedDeckName || `Deck presentation ${i+1}`}</p>
+              <svg onClick={handleDotClick} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-three-dots" viewBox="0 0 16 16">
+  <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+</svg>
+            </div>
               </div>
             ))}
           {/* </Link> */}
         </div>
+        {isDotShow && (
+        <div className="model-click">
+          <p onClick={handleRenameClick}>Rename</p>
+          <p>Copy link</p>
+          <p onClick={handleDeleteClick}>Delete</p>
+        </div>
+       )} 
+
+{isRenameModalOpen && (
+        <Rename
+          initialName={"Deck presentation 01" || editedDeckName}
+          onUpdate={handleUpdateDeckName}
+          onClose={() => setIsRenameModalOpen(false)}
+        />
+      )}
+
+{isDeleteModalOpen && <Delete onCancel={handleCancelDelete} />} 
 
         {isModalOpen && (
           <div

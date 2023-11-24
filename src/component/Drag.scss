@@ -29,20 +29,55 @@ h2 {
   width: 100%;
   margin-top: 2rem;
 }
+.model-click {
+  position: relative;
+  bottom: 2rem;
+  left: 13rem;
+  padding: 5px;
+  text-align: center;
+  // height: 20px;
+  // width: 20px;
+  // border: 1px solid #ccc;
+  // padding: 10px;
+  border-radius: 5px;
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: black;
+  // z-index: 1000;
+  color: white;
+}
+.model-click > p{
+  color: white;
+}
+.model-click > p:hover{
+  background-color: gray;
+  border-radius: 3px;
+  // padding: 5px;
+  cursor: pointer;
+}
+.dots > svg {
+  cursor: pointer;
+}
+
 .deck-image {
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  // gap: 2rem;
   width: 700px;
   height: 200px;
-
+}
+.dots {
+  display: flex;
+  // align-items: center;
+  justify-content: space-between;
 }
 .deck-id {
 }
 .deck-images {
+  // display: flex;
+  // flex-direction: column;
   height: 140px;
   width: 220px;
-  border-radius: 25px;
-  margin-left: 1em;
+  border-radius: 5px;
 }
 
 // isModelopen

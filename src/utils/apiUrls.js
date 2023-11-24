@@ -19,6 +19,7 @@ export const apiUrls = {
   GETFILE:"/deck/listAll",
   CONVERT:"/deck/upload",
   REGISTER:"/register",
+  LOGIN:"/login",
   GETPPTDATA:"/deck/dataById",
   GETSUMMARY:"/deck/getSummary",
   GETSLIDESTEXT:"/deck/slideDataById",
