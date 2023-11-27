@@ -150,7 +150,7 @@ const SidebarLayout = (props) => {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
