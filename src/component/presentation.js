@@ -14,7 +14,7 @@ function Custom() {
   const [isLoading, setIsLoading] = useState(false);
   const [abble, setAble] = useState(false);
   const [imgs, setImgs] = useState([]);
-  const [text, setText] = useState([]);
+  const [text, setText] = useState();
   const [summary, setSummary] = useState([]);
   const [apiResponse, setApiResponse] = useState([]);
   const [apiSlideResponse, setApiSlideResponse] = useState({
@@ -49,6 +49,7 @@ function Custom() {
       const apiResponse1 = await callAPI(apiUrls.GETPPTDATA, { fileId: param2 }, "GET");
       console.log(apiResponse1,"apiii");
       setWordData(apiResponse1.data[0])
+      setText(apiResponse1.data[x].text)
       setApiResponse(apiResponse1.data)
       // setImageName(apiResponse1.data.imageName)
       // setImageCount(apiResponse1.data.imageCount);
@@ -95,6 +96,7 @@ function Custom() {
     setVal(index);
     const wordSlider = apiResponse[index];
     setX(index)
+    setText(apiResponse[x].text)
     setWordData(wordSlider);
     // console.log("wweerr", wordSlider);
   };
@@ -106,15 +108,10 @@ function Custom() {
   //   setWordData(wordSlider);
   // };
   const HandleChange = (event) => {
-    text=event.target.deckText
-    setText(text)
-    const updatedObject = {
-      ...apiSlideResponse,
-      
-      summaryCount:event.target.deckText
-    };
+    
+    setText(event.target.value)
 
-    setApiSlideResponse(updatedObject)
+    // setApiSlideResponse(updatedObject)
     
 
   }
@@ -223,15 +220,14 @@ console.log(respon);
             <div className="notes">
               <div className="notes-flex">
                 <h3>Notes</h3>
-                {apiSlideResponse.summary[x]?.summaryCount>=1?<button disabled={true}>Generated</button>:
-               <button  disabled={false}>Generate</button>}
+               <button  disabled={false}>Generate</button>
               </div> 
               <div className="notes-input">
                 <textarea
                   // type="z"
                   name="deckText"
-                  id={apiSlideResponse.id[x]?.slideId}
-                  value={apiSlideResponse.summary[x]?.summary?apiSlideResponse.summary[x].summary:apiSlideResponse.text[x]?.textExtract}
+                  id={apiResponse[x].id}
+                  value={text}
                   onChange={HandleChange}
                   placeholder="Your presentation notes"
                   style={{ width: "250px", height: "474px" }}
