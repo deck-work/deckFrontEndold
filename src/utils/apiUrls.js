@@ -23,7 +23,7 @@ export const apiUrls = {
   GETPPTDATA:"/deck/dataById",
   GETSUMMARY:"/deck/getSummary",
   GETSLIDESTEXT:"/deck/slideDataById",
-  CREATESLIDETEXT:"/createSummary",
+  CREATESLIDETEXT:"/deck/createSummary",
   GETSLIDESID:"/getSlideId"
   
 };

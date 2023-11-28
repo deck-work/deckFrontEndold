@@ -188,7 +188,17 @@ console.log(respon);
     }
 
   }
-  
+  const generate=async(event)=>{
+    setIsLoading(true)
+    const headers={
+      "Content-Type": "application/json",
+      }
+    const Summary = await callAPI(apiUrls.CREATESLIDETEXT, {}, "POST",{ text:apiResponse[x].text,textId:apiResponse[x].textId},{},headers);
+if(Summary.status==200){
+  fetchData()
+  setIsLoading(false)
+}
+  }
   return (
     <div>
       {!loadingData ? (
@@ -220,14 +230,15 @@ console.log(respon);
             <div className="notes">
               <div className="notes-flex">
                 <h3>Notes</h3>
-               <button  disabled={false}>Generate</button>
+                {apiResponse[x].summary?<button  disabled={true}>Generated</button>:
+              <button  onClick={generate}>Generate</button>}
               </div> 
               <div className="notes-input">
                 <textarea
                   // type="z"
                   name="deckText"
                   id={apiResponse[x].id}
-                  value={text}
+                  value={apiResponse[x].summary?apiResponse[x].summary:text}
                   onChange={HandleChange}
                   placeholder="Your presentation notes"
                   style={{ width: "250px", height: "474px" }}
