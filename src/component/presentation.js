@@ -17,6 +17,7 @@ function Custom() {
   const [text, setText] = useState();
   const [summary, setSummary] = useState([]);
   const [apiResponse, setApiResponse] = useState([]);
+  const [x, setX] = useState(0);
   const [apiSlideResponse, setApiSlideResponse] = useState({
     id: '',
     text: '',
@@ -43,7 +44,7 @@ function Custom() {
   }, []);
   useEffect(() => {
     setImage()
-  }, [apiResponse]);
+  }, [apiResponse,x]);
   async function fetchData() {
     try {
       const apiResponse1 = await callAPI(apiUrls.GETPPTDATA, { fileId: param2 }, "GET");
@@ -91,10 +92,10 @@ function Custom() {
   console.log("image",imgs);
   const [wordData, setWordData] = useState();
   const [val, setVal] = useState(0);
-  const [x, setX] = useState(0);
   const handleClick = (index) => {
     setVal(index);
     const wordSlider = apiResponse[index];
+   
     setX(index)
     setText(apiResponse[x].text)
     setWordData(wordSlider);
@@ -238,7 +239,7 @@ if(Summary.status==200){
                   // type="z"
                   name="deckText"
                   id={apiResponse[x].id}
-                  value={apiResponse[x].summary?apiResponse[x].summary:text}
+                  value={apiResponse[x].summary?apiResponse[x].summary:apiResponse[x].text}
                   onChange={HandleChange}
                   placeholder="Your presentation notes"
                   style={{ width: "250px", height: "474px" }}
